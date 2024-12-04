@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paws & Hearts Pet Adoption</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="front-page.css">
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Navigation -->
+    <nav class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Paws & Hearts</h1>
+            <div class="space-x-4">
+                <a href="#" id="home-link" class="hover:text-gray-200">Home</a>
+                <a href="#" id="available-pets-link" class="hover:text-gray-200">Available Pets</a>
+                <a href="#" id="contact-link" class="hover:text-gray-200">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dynamic Content Area -->
+    <div id="content" class="container mx-auto py-8">
+        <!-- Default content goes here -->
+        <div id="home-content" class="text-center">
+            <h2 class="text-3xl font-bold">Welcome to Paws & Hearts</h2>
+            <p class="text-lg mt-4">Your one-stop solution to finding and adopting your perfect pet companion.</p>
+        </div>
+    </div>
+
+    <script>
+        // Function to load home content
+        function loadHomeContent() {
+            document.getElementById('content').innerHTML = `
+                <div id="home-content" class="text-center">
+                    <h2 class="text-3xl font-bold">Welcome to Paws & Hearts</h2>
+                    <p class="text-lg mt-4"> your one-stop solution to finding and adopting your perfect pet companion.</p>
+                </div>
+            `;
+        }
+
+        // Function to load available pets content (this is just a placeholder, can be updated later)
+        function loadAvailablePetsContent() {
+            document.getElementById('content').innerHTML = `
+                <div id="available-pets" class="text-center">
+                    <h2 class="text-3xl font-bold">Available Pets</h2>
+                    <p class="text-lg mt-4">Check out the list of pets available for adoption!</p>
+                </div>
+            `;
+        }
+
+        // Function to load contact content
+        function loadContactContent() {
+            document.getElementById('content').innerHTML = `
+                <section id="contact" class="py-16 bg-gray-200">
+                    <div class="container mx-auto text-center">
+                        <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
+                        <p class="text-xl mb-6">Have questions or need more information? Feel free to reach out to us!</p>
+                        <p class="text-lg mb-4">We are here to help you with any queries regarding pet adoption, fostering, or donations.</p>
+                        <div>
+                            <p class="text-xl font-semibold">Email: info@pawsandhearts.com</p>
+                            <p class="text-xl font-semibold">Phone: +123 456 7890</p>
+                        </div>
+                            <!-- Call to Action -->
+    <div class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto text-center">
+            <h3 class="text-3xl font-bold mb-4">Make a Difference</h3>
+            <p class="text-xl mb-8">Can't adopt right now? Consider fostering or donating!</p>
+            <div class="space-x-4">
+                <button class="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600">
+                    Become a Foster
+                </button>
+                <button class="bg-white text-blue-500 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100">
+                    Donate Now
+                </button>
+            </div>
+        </div>
+    </div>
+                    </div>
+                </section>
+            `;
+        }
+
+        // Event listeners for navigation links
+        document.getElementById('home-link').addEventListener('click', function (event) {
+            event.preventDefault();
+            loadHomeContent();
+        });
+
+        document.getElementById('available-pets-link').addEventListener('click', function (event) {
+            event.preventDefault();
+            loadAvailablePetsContent();
+        });
+
+        document.getElementById('contact-link').addEventListener('click', function (event) {
+            event.preventDefault();
+            loadContactContent();
+        });
+
+        // Initially load home content
+        loadHomeContent();
+    </script>
+    <script src="dynamic-content.js"></script>
+</body>
+
+</html>
